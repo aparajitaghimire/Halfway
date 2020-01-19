@@ -8,13 +8,13 @@ body{
   position: relative;
   text-align:center;
   font-size: 18pt;
-  top:180px;
+  top:153px;
   font-family: courier;
 }
 
 .viewResults {
   position: absolute;
-  top:67%;
+  top:62%;
   left:43.75%;
   border: none;
   background-color: rgb(54, 62, 77);
@@ -29,7 +29,7 @@ body{
 
 .submit {
   position: absolute;
-  top:58%;
+  top:54%;
   left:46.25%;
   border: none;
   background-color: rgb(54, 62, 77);
@@ -41,12 +41,22 @@ body{
   font-family: courier;
 }
 
+.Description {
+  position: relative;
+  color: rgb(54, 62, 77);
+  font-family: courier;
+  font-size: 12pt;
+  top: 159px;
+  text-align:center;
+
+}
+
 p{
   position: relative;
   color: rgb(54, 62, 77);
   font-family: courier;
   font-size: 40pt;
   text-align:center;
-  top: 210px;
+  top: 200px;
 
 }
