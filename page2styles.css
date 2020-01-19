@@ -2,14 +2,6 @@
 body{
   background-color: rgb(93, 144, 227);
 }
-.ptypeinput{
-  color: rgb(54, 62, 77);
-  position: relative;
-  text-align:center;
-  font-size:18pt;
-  top:180px;
-  font-family: courier;
-}
 
 .pinput{
   color: rgb(54, 62, 77);
@@ -21,10 +13,24 @@ body{
 }
 
 .viewResults {
-  id = 'done';
   position: absolute;
-  top:93%;
-  left:86%;
+  top:60%;
+  left:43.75%;
+  border: none;
+  background-color: rgb(54, 62, 77);
+  color: rgb(210, 213, 217);;
+  padding: 8px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  font-family: courier;
+}
+
+
+.submit {
+  position: absolute;
+  top:52%;
+  left:46.25%;
   border: none;
   background-color: rgb(54, 62, 77);
   color: rgb(210, 213, 217);;

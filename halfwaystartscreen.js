@@ -7,7 +7,7 @@ var c = canvas.getContext('2d');
 canvas.addEventListener('click', function(evt) {
     var mousePos = getMousePos(canvas, evt);
     if (isInside(mousePos,rect)) {
-      location.replace('https://google.com');
+      location.replace('Page2.html');
     }
 });
 
@@ -42,7 +42,7 @@ function draw() {
   if(twocircleflag==true) {
     c.fillStyle = 'blue';
     c.beginPath();
-    c.arc(ball1x, window.innerHeight/2-45, 30, 0, Math.PI*2, true);
+    c.arc(ball1x, window.innerHeight/2-25, 30, 0, Math.PI*2, true);
     c.strokeStyle = 'blue';
     c.stroke();
     c.closePath();
@@ -50,26 +50,26 @@ function draw() {
 
     c.fillStyle = 'red';
     c.beginPath();
-    c.arc(ball2x, window.innerHeight/2-45, 30, 0, Math.PI*2, false);
+    c.arc(ball2x, window.innerHeight/2-25, 30, 0, Math.PI*2, false);
     c.strokeStyle = 'red';
     c.stroke();
     c.closePath();
     c.fill();
   }
   else{
-    c.fillStyle = 'green';
+    c.fillStyle = 'rgb(255, 249, 77)';
     c.beginPath();
-    c.arc(ball1x, window.innerHeight/2-45, radius, 0, Math.PI*2, false);
-    c.strokeStyle = 'green';
+    c.arc(ball1x, window.innerHeight/2-25, radius, 0, Math.PI*2, false);
+    c.strokeStyle = 'rgb(255, 249, 77)';
     c.stroke();
     c.closePath();
     c.fill();
 
-    c.fillStyle = 'black';
+    c.fillStyle = 'rgb(54, 54, 54)';
     c.font=i + "px Courier";
     c.textAlign = 'center';
     c.fillText("Halfway", canvas.width/2, canvas.height/2-20);
-    c.fillStyle = 'black';
+    c.fillStyle = 'rgb(97, 97, 97)';
     c.fillRect(canvas.width/2-62.5, canvas.height/2+20, 125, 50);
     c.fillStyle = 'white';
     c.font="20px Courier";
