@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 
-</html>
+<html>
 <head>
 <link rel="stylesheet" href = "page2styles.css"/>
+<script src="Page2.js"></script>
 <head>
 
 
 <body>
-  <p>Genre Preference</p>
+
+  <p id="Number">Genre Preference 1</p>
       <form>
             <p class = "pinput">
-              <select>
+              <select id = "Genre">
                    <option value = "1">Action</option>
                    <option value = "2">Adventure</option>
                    <option value = "3">Animation</option>
@@ -26,10 +28,12 @@
                    <option value = "13">Science Fiction</option>
                    <option value = "14">Thriller</option>
                    <option value = "15">War</option>
-                 </select>
-        </p>
+              </select>
+            </p>
       </form>
-      <button class="viewResults" onClick="window.location.href = 'halfwayindex.html';">View Results</button>
-      <button class="submit" onClick="window.location.href = 'Page2.html';">Submit</button>
+      
+      <button class="viewResults" onclick="window.location.href = 'Page3.html';">View Results</button>
+      <button class="submit" onclick="GetGenres()">Submit</button>
+      <p id="pTest"></p>
 </body>
 </html>

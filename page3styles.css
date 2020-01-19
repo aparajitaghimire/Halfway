@@ -1,0 +1,41 @@
+body{
+  background-color: rgb(255, 245, 55);
+}
+
+.full-table {
+  position : absolute;
+  top:30%;
+  left:20%;
+  border-collapse: collapse;
+  width: 50%;
+}
+.odd-row{
+  background-color: rgb(255, 247, 183)
+}
+.odd-even{
+  background-color: rgb(255, 239, 114)
+}
+.table-head {
+  text-align: left;
+  padding: 8px;
+  background-color:rgb(252, 215, 3);
+  font-color: black;
+}
+
+
+.table-desc odd {
+  /*background-color: rgb(255, 250, 142);*/
+  color: black;
+  padding: 10px;
+}
+
+.Result{
+  color: white;
+  position: absolute;
+  text-align:center;
+  font-size: 32pt;
+  top:12%; 
+  left:40%;
+  font-family: courier;
+}
+
