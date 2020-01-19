@@ -23,33 +23,40 @@ if(inputGenre4) {
   url += ',' + '' + inputGenre4;
 }
 
-const https = require('https');
-https.get(url, (resp) => {
-  let data = '';
+const app = document.getElementById('root')
 
-  // A chunk of data has been recieved.
-  resp.on('data', (chunk) => {
-    data += chunk;
-  });
+const container = document.createElement('div')
+container.setAttribute('class', 'container')
 
-  // The whole response has been received. Print out the result.
-  resp.on('end', () => {
-    let i = 0;
-    for(i = 0; i < 5; i++) {
-      titles.push(JSON.parse(data).results[i].title);
-      console.log(titles[i]);
-      ids.push(JSON.parse(data).results[i].id);
-      genreIds.push(JSON.parse(data).results[i].genre_ids);
-      movieImgs.push(JSON.parse(data).results[i].poster_path);
-      descriptions.push(JSON.parse(data).results[i].overview);
-      console.log(descriptions[i]);
-    //console.log(JSON.parse(data).results);
-    }
+app.appendChild(container)
 
-  });
+var request = new XMLHttpRequest()
+request.open('GET', url, true)
+request.onload = function() {
+    var data = JSON.parse(this.response)
+       if (request.status >= 200 && request.status < 400) {
+            let i = 0;
+            //data.forEach(results => {
+            for (i = 0; i < 5; i++) {  
+                const card = document.createElement('div')
+                card.setAttribute('class', 'card')
+                const h1 = document.createElement('h1')
+                h1.textContent = data.results[i].title
 
-}).on("error", (err) => {
-  console.log("Error: " + err.message);
-});
-
+                const p = document.createElement('p')
+                //movie.description = 
+                let des = data.results[i].overview
+      p.textContent = `${des}`
+                container.appendChild(card)
+                card.appendChild(h1)
+                card.appendChild(p)
+            }
+            //})
+        } else {
+            const errorMessage = document.createElement('marquee')
+            errorMessage.textContent = `Gah, it's not working!`
+            app.appendChild(errorMessage)
+        }
+}
+request.send()
 
